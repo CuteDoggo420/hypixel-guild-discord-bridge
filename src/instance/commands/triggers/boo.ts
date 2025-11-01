@@ -21,8 +21,10 @@ export default class Boo extends ChatCommandHandler {
 
   async handler(context: ChatCommandContext): Promise<string> {
     const now = new Date()
-    if (now.getMonth() !== 9) {
-      return `You can only scare people in October!`
+    const month = now.getMonth()
+
+    if (!(month === 9 || (month === 10 && now.getDate() <= 5))) {
+      return `You can only scare people during spooky season!`
     }
 
     const givenUsername = context.args[0] ?? context.username
