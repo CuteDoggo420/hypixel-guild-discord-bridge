@@ -111,6 +111,8 @@
   "commands.mcgo.response": "{{username}}'s Cops and Crims stats: Games: {{gamePlays, number}}, Wins: {{gameWins, number}}, Kills: {{kills, number}}, Shots: {{shotsFired, number}} ({{headshotKills, number}} Headshots), Bombs: {{bombsPlanted, number}} planted / {{bombsDefused, number}} defused",
   "commands.starfall.now": "{{username}}, Cult of the Fallen Star is here. Get that free x200 starfall!",
   "commands.starfall.response": "{{username}}, Cult of the Fallen Star is starting in {{timeTillStarfall}}.",
+  "commands.asian.fail": "haiyaaaaaaaaa this is so easy, you're a disappointment *takes off slipper* (answer: {{answer}})",
+  "commands.asian.success": "Big brain!",
 
   "commands.praise": [
     "{{name}} is a very good boy/girl",
