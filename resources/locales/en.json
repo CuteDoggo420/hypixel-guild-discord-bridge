@@ -109,6 +109,8 @@
   "commands.news.none": "No news found right now :/",
   "commands.mcgo.none": "{{username}} has never played Cops and Crims",
   "commands.mcgo.response": "{{username}}'s Cops and Crims stats: Games: {{gamePlays, number}}, Wins: {{gameWins, number}}, Kills: {{kills, number}}, Shots: {{shotsFired, number}} ({{headshotKills, number}} Headshots), Bombs: {{bombsPlanted, number}} planted / {{bombsDefused, number}} defused",
+  "commands.starfall.now": "{{username}}, Cult of the Fallen Star is here. Get that free x200 starfall!",
+  "commands.starfall.response": "{{username}}, Cult of the Fallen Star is starting in {{timeTillStarfall}}.",
 
   "commands.praise": [
     "{{name}} is a very good boy/girl",

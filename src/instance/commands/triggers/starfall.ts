@@ -25,7 +25,7 @@ export default class Starfall extends ChatCommandHandler {
     const currentHour = (currentEpoch % DayInMilliseconds) / HourInMillisecond
 
     if (StarfallDays.has(Math.floor(currentDay)) && currentHour < 6) {
-      return `${context.username}, Cult of the Fallen Star is here. Get that free x200 starfall!`
+      return context.app.i18n.t(($) => $['commands.starfall.response'], { username: context.username })
     }
 
     let timeTillStarfall = 0
@@ -39,7 +39,9 @@ export default class Starfall extends ChatCommandHandler {
       day++
       timeTillStarfall += DayInMilliseconds
     }
-
-    return `${context.username}, Cult of the Fallen Star is starting in ${formatTime(timeTillStarfall)}.`
+    return context.app.i18n.t(($) => $['commands.starfall.response'], {
+      username: context.username,
+      timeTillStarfall: formatTime(timeTillStarfall)
+    })
   }
 }
