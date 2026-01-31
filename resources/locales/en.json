@@ -124,6 +124,8 @@
   "commands.boop.failed": "Can not boop {{username}}: {{reason}}",
   "commands.boop.cooldown": "{{username}}, you can use this command again in {{cooldown}} seconds.",
   "commands.boop.no-account": "No active connected Minecraft account exists to use",
+  "commands.buildbattle.never-played": "{{username}} has never played Build Battle before?",
+  "commands.buildbattle.response": "{{title}} {{username}}'s Build Battle score is {{score, number}} with {{wins, number}} wins.",
 
   "commands.praise": [
     "{{name}} is a very good boy/girl",
