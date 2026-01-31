@@ -113,6 +113,12 @@
   "commands.starfall.response": "{{username}}, Cult of the Fallen Star is starting in {{timeTillStarfall}}.",
   "commands.asian.fail": "haiyaaaaaaaaa this is so easy, you're a disappointment *takes off slipper* (answer: {{answer}})",
   "commands.asian.success": "Big brain!",
+  "commands.boo.not-october": "You can only scare people in October!",
+  "commands.boo.error": "Could not scare {{usernam}} for some unknown reason",
+  "commands.boo.success": "{{username}} has been spooked!",
+  "commands.boo.failed": "Can not scare {{username}}: {{reason}}",
+  "commands.boo.cooldown": "{{username}}, you can use this command again in {{cooldown}} seconds.",
+  "commands.boo.no-account": "No active connected Minecraft account exists to use",
 
   "commands.praise": [
     "{{name}} is a very good boy/girl",
