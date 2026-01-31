@@ -127,6 +127,8 @@
   "commands.buildbattle.never-played": "{{username}} has never played Build Battle before?",
   "commands.buildbattle.response": "{{title}} {{username}}'s Build Battle score is {{score, number}} with {{wins, number}} wins.",
   "commands.catacombs.response": "{{username}} is Catacombs {{cata, level}} - {{class}} - Secrets {{secrets}}.",
+  "commands.chocolate.no-factory": "{{username}} does not have a chocolate factory.",
+  "commands.chocolate.response": "{{username}} has produced {{totalChocolate}} chocolate and spent {{chocolateSpent}}.",
 
   "commands.praise": [
     "{{name}} is a very good boy/girl",
