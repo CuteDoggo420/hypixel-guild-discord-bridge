@@ -126,6 +126,7 @@
   "commands.boop.no-account": "No active connected Minecraft account exists to use",
   "commands.buildbattle.never-played": "{{username}} has never played Build Battle before?",
   "commands.buildbattle.response": "{{title}} {{username}}'s Build Battle score is {{score, number}} with {{wins, number}} wins.",
+  "commands.catacombs.response": "{{username}} is Catacombs {{cata, level}} - {{class}} - Secrets {{secrets}}.",
 
   "commands.praise": [
     "{{name}} is a very good boy/girl",
