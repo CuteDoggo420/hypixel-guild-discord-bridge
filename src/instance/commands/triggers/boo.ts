@@ -28,7 +28,10 @@ export default class Boo extends ChatCommandHandler {
     const givenUsername = context.args[0] ?? context.username
     const currentTime = Date.now()
     if (this.lastCommandExecutionAt + Boo.CommandCoolDown > currentTime) {
-      return context.app.i18n.t(($) => $['commands.boo.cooldown'], { username: context.username, cooldown: Math.floor((this.lastCommandExecutionAt + Boo.CommandCoolDown - currentTime) / 1000) })
+      return context.app.i18n.t(($) => $['commands.boo.cooldown'], {
+        username: context.username,
+        cooldown: Math.floor((this.lastCommandExecutionAt + Boo.CommandCoolDown - currentTime) / 1000)
+      })
     }
     const minecraftInstanceName =
       context.message.instanceType === InstanceType.Minecraft
@@ -52,7 +55,10 @@ export default class Boo extends ChatCommandHandler {
         return context.app.i18n.t(($) => $['commands.boo.success'], { username: givenUsername })
       }
       case 'failed': {
-        return context.app.i18n.t(($) => $['commands.boo.failed'], { username: givenUsername, reason: result.message.length > 0 ? result.message[0].content : 'No idea why :D' })
+        return context.app.i18n.t(($) => $['commands.boo.failed'], {
+          username: givenUsername,
+          reason: result.message.length > 0 ? result.message[0].content : 'No idea why :D'
+        })
       }
       case 'error': {
         return context.app.i18n.t(($) => $['commands.boo.error'], { username: givenUsername })

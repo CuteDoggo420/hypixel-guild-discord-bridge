@@ -46,12 +46,18 @@ export default class Buildbattle extends ChatCommandHandler {
     if (player == undefined) return playerNeverPlayedHypixel(context, givenUsername)
 
     const stat = player.stats?.BuildBattle
-    if (stat === undefined) return context.app.i18n.t(($) => $['commands.buildbattle.never-played'], { username: givenUsername })
+    if (stat === undefined)
+      return context.app.i18n.t(($) => $['commands.buildbattle.never-played'], { username: givenUsername })
     const score = stat.score ?? 0
     const wins = stat.wins ?? 0
     const title = await this.getTitle(context, uuid, score)
 
-    return context.app.i18n.t(($) => $['commands.buildbattle.never-played'], { title, username: givenUsername, score, wins })
+    return context.app.i18n.t(($) => $['commands.buildbattle.never-played'], {
+      title,
+      username: givenUsername,
+      score,
+      wins
+    })
   }
 
   private async getTitle(context: ChatCommandContext, uuid: string, score: number): Promise<string> {

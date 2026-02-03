@@ -23,7 +23,10 @@ export default class Boop extends ChatCommandHandler {
     const givenUsername = context.args[0] ?? context.username
     const currentTime = Date.now()
     if (this.lastCommandExecutionAt + Boop.CommandCoolDown > currentTime) {
-      return context.app.i18n.t(($) => $['commands.boo.cooldown'], { username: context.username, cooldown: Math.floor((this.lastCommandExecutionAt + Boop.CommandCoolDown - currentTime) / 1000) })
+      return context.app.i18n.t(($) => $['commands.boo.cooldown'], {
+        username: context.username,
+        cooldown: Math.floor((this.lastCommandExecutionAt + Boop.CommandCoolDown - currentTime) / 1000)
+      })
     }
     const minecraftInstanceName =
       context.message.instanceType === InstanceType.Minecraft
@@ -44,10 +47,13 @@ export default class Boop extends ChatCommandHandler {
     )
     switch (result.status) {
       case 'success': {
-        return context.app.i18n.t(($) => $['commands.boop.success'], { username: givenUsername})
+        return context.app.i18n.t(($) => $['commands.boop.success'], { username: givenUsername })
       }
       case 'failed': {
-        return context.app.i18n.t(($) => $['commands.boop.failed'], { username: givenUsername, reason: result.message.length > 0 ? result.message[0].content : 'No idea why :D' })
+        return context.app.i18n.t(($) => $['commands.boop.failed'], {
+          username: givenUsername,
+          reason: result.message.length > 0 ? result.message[0].content : 'No idea why :D'
+        })
       }
       case 'error': {
         return context.app.i18n.t(($) => $['commands.boop.error'], { username: givenUsername })
